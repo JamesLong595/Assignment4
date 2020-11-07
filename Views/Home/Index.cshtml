@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="jumbotron bg-cover">
+    <h1 class="display-5" align="left">
+        Energy Insights
+        <svg width="1.1em" height="1.1em" viewBox="0 0 16 16" class="bi bi-power" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M5.578 4.437a5 5 0 1 0 4.922.044l.5-.866a6 6 0 1 1-5.908-.053l.486.875z" />
+            <path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z" />
+        </svg>
+    </h1>
+    <p class="lead pb-6" align="left">Insights For Your World</p>
+    <p class="pb-5"></p>
+</div>
+
+<div class="jumbotron bg-white">
+    <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#homeCarousel" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#00392a" /></svg>
+                <div class="container">
+                    <div class="carousel-caption text-left resp">
+                        <p>Site Overview</p>
+                        <p>
+                            Welcome to Energy Insights. This site was created as a school project to demonstrate the Model-View-Class (MVC) framework
+                            with Entity Framework Code-First and RESTful API consumption. We hope you find the UI easy to use. All data are sourced from
+                            the U.S. Energy Information Administration via the Open Data program.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#00392a" /></svg>
+                <div class="container">
+                    <div class="carousel-caption text-left resp">
+                        <p>Explore the Data</p>
+                        <p>
+                            We provide annual energy consumption data for the U.S. by sector and source. Sectors include Commercial, Industrial, Residential, and Transportation. Energy sources include Biomass, Coal, Geothermal, Hydroelectric, Natural Gas, Petroleum, Solar, and Wind.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="resp">
+            <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden resp">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+                <span class="visually-hidden resp">Next</span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+</div>

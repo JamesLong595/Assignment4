@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Update";
+}
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="pb-2 mt-4 mb-2 border-bottom">
+                    <h1 class="text-center">Update Record</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center pt-3">
+            <div class="col-9">
+                <form>
+                    <div class="form-row justify-content-center">
+                        <div class="form-group col-md-3">
+                            <label for="sector">Sector</label>
+                            <select id="sector" class="form-control">
+                                <option>Commercial</option>
+                                <option>Industrial</option>
+                                <option>Residential</option>
+                                <option selected>Transportation</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="energySource">Energy Source</label>
+                            <select id="energySource" class="form-control">
+                                <option>Biomass Energy</option>
+                                <option>Coal</option>
+                                <option>Electricity Retail Sales</option>
+                                <option>Geothermal Energy</option>
+                                <option selected>Natural Gas</option>
+                                <option>Solar Energy</option>
+                                <option>Total Energy</option>
+                                <option>Total Fossil Fuels</option>
+                                <option>Total Petroleum</option>
+                                <option>Total Primary Energy</option>
+                                <option>Total Renewable Energy</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row justify-content-center">
+                        <div class="form-group col-md-3">
+                            <label for="year">Year</label>
+                            <input type="text" class="form-control" id="year" value="2019">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="energy consumption">Energy Consumption (in trillion BTUs)</label>
+                            <input type="text" class="form-control" id="year" value="1035.231">
+                        </div>
+                    </div>
+                    <div class="form-row justify-content-center">
+                        <button type="submit" class="btn btn-primary text-center">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Update";
+}
+
+    <div class="container bg-white">
+        <div class="row">
+            <div class="col">
+                <div class="pb-2 mt-4 mb-2 border-bottom">
+                    <h1 class="text-center">About Us</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pt-4">
+            <div class="card-deck">
+                <div class="card text-center">
+                    <img class="card-img-top" src="img/mike.jpg" alt="Mike Borkland">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Michael Borkland</h5>
+                        <p class="card-text">Currently working as a Cloud Automation Engineer at Citi. Has a strong passion for technology, especially with how it relates to achieving business objectives. Enjoys self-study in subjects of interest, including imperative and functional programming, algorithms, data structures, and software engineering. </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">MS, Business Analytics and Information Systems</li>
+                            <li class="list-group-item">Expected May 2021</li>
+                            <li class="list-group-item">Helped create navbar, data model, home page and "About Us" page. Created table and forms for master-detail pages.</li>
+                            <li class="list-group-item"><a href="https://www.linkedin.com/in/michael-borkland/" class="btn btn-primary">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <img class="card-img-top" src="img/james.jpg" alt="James Long">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">James Long</h5>
+                        <p class="card-text">James is an IT Engineering veteran and author of an advanced technology book published by Cisco. James transitioned into Business Operations for several years and now focuses on Business Analysis, Software Development, and Project Management. Jmaes holds a B.S. in Business Administration from the University of Florida as well as numerous technical and professional certifications.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">MS, Business Analytics and Information Systems</li>
+                            <li class="list-group-item">Expected December 2021</li>
+                            <li class="list-group-item">created carousel on home page, made text responsive in various places, created delete page, miscellaneous modifications to all pages</li>
+                            <li class="list-group-item"><a href="#" class="btn btn-primary">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <img class="card-img-top" src="img/aston.jpg" alt="Aston Wright">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Aston Wright</h5>
+                        <p class="card-text">Aston is currently a Business Analyst working for the University of South Florida. He is working as a Graduate Assistant while doing Analytics for the Academic Success Center. He is extremely interested in Data Science and Sports. Hopefully in the future he can work with NBA Athletes to improve thier performances. </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">MS, Business Analytics and Information Systems</li>
+                            <li class="list-group-item">Expected July 2021</li>
+                            <li class="list-group-item">Made changes to the about us page by updating Bio's and adding a form.</li>
+                            <li class="list-group-item"><a href="#" class="btn btn-primary">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <hr>
+        <br />
+    </div>
+
+    <div class="container bg-white">
+        <div style="text-align:center">
+            <h2>Contact Us</h2>
+            <p> Leave us a message to learn more about this site.</p>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="img/USFmap.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <form action="/action_page.php">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="First name">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Last name">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa" selected>USA</option>
+                    </select>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-white">
+        <br />
+        <hr>
+        <br />
+        <p align="center">Visit <a href="https://github.com/JamesLong595/Assignment4" target="_blank">our GitHub repo</a> for the source code.</p>
+        <br />
+        <hr>
+        <br />
+    </div>
+
+    <div class="container bg-white">
+        <h2>Data Model</h2>
+        <img src="img/DataModel.JPG" alt="DataModel" class="center">
+        <hr>
+    </div>

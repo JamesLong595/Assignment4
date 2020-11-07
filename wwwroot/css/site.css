@@ -1,0 +1,164 @@
+/* change the background color */
+.navbar-custom {
+background-color: #00392a;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+color: #ffffff;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+color: #c2b163;
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+color: #ffffff;
+}
+
+/* style the home page image */
+.bg-cover {
+background-image: url(~/img/energy-bg.png);
+text-align: left;
+color: #ffffff;
+}
+
+/* ------- customize primary buttons -------- */
+.btn-primary {
+color: #fff;
+background-color: #00392a;
+border-color: #00130e;
+}
+
+.btn-primary:hover {
+color: #fff;
+background-color: #000604;
+border-color: #00533d;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+color: #fff;
+background-color: #000604;
+border-color: #00533d;
+box-shadow: 0 0 0 0.2rem rgba(38, 54, 50, 0.5);
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+color: #fff;
+background-color: #00392a;
+border-color: #00130e;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+color: #fff;
+background-color: #006c50;
+border-color: black;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
+box-shadow: 0 0 0 0.2rem rgba(38, 54, 50, 0.5);
+}
+
+.btn-outline-primary {
+color: #00392a;
+border-color: #00392a;
+}
+
+.btn-outline-primary:hover {
+color: #00251b;
+background-color: #00533d;
+border-color: #00392a;
+}
+
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+box-shadow: 0 0 0 0.2rem rgba(0, 57, 42, 0.5);
+}
+
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+color: #00392a;
+background-color: transparent;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle {
+color: #fff;
+background-color: #00533d;
+border-color: #00392a;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 57, 42, 0.5);
+}
+
+footer {
+background: #00392a;
+color: #c2b163;
+margin-top: 50px;
+}
+
+.table-responsive {
+margin: 30px 0;
+}
+
+.table-wrapper {
+min-width: 1000px;
+background: #fff;
+padding: 20px;
+box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.table-title {
+padding-bottom: 0px;
+margin: 0 0 10px;
+min-width: 100%;
+}
+
+.table-title h2 {
+margin: 8px 0 0;
+font-size: 22px;
+}
+
+.search-box input {
+height: 34px;
+border-radius: 20px;
+padding-left: 35px;
+border-color: #ddd;
+box-shadow: none;
+}
+
+.search-box input:focus {
+border-color: #3FBAE4;
+}
+
+.search-box i {
+color: #a0a5b1;
+position: absolute;
+font-size: 19px;
+top: 8px;
+left: 10px;
+}
+
+/* For mobile phones*/
+@media only screen and (max-width: 600px) {
+div.resp {
+font-size: 10px;
+}
+}
+
+/* For tablets */
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+div.resp {
+font-size: 11px;
+}
+}
+
+/* For desktops */
+@media only screen and (min-width: 801px) {
+div.resp {
+font-size: 13px;
+}
+}

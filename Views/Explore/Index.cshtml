@@ -1,22 +1,15 @@
 ﻿@{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Explore";
 }
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="pb-2 mt-4 mb-2 border-bottom">
-                    <h1 class="text-center">Explore Energy Data</h1>
-                </div>
-            </div>
-        </div>
+    <div class="container bg-white">
         <div class="row justify-content-center pt-3">
             <div class="col-9">
                 <div class="row justify-content-center table-title">
-                    <div class="col text-center"><h2>Annual Energy Consumption</h2></div>
+                    <div class="col text-center"><h2>Explore Annual Energy Consumption Data</h2></div>
                 </div>
                 <div class="row justify-content-center pb-2 border-bottom">
-                    <div class="col text-center"><a href="create.html">Create New Record</a></div>
+                    <div class="col text-center"><a asp-controller="Create" asp-action="Index">Create New Record</a></div>
                 </div>
                 <form>
                     <div class="form-row justify-content-center pt-3 pb-2">
@@ -43,7 +36,7 @@
                         </div>
                     </div>
                 </form>
-                <table class="table table-responsive-sm table-striped text-center pb-2 mb-2">
+                <table class="table table-responsive-sm table-striped text-center pb-2 mb-2 resp">
                     <thead>
                         <tr>
                             <th class="align-middle" scope="col">Sector</th>
@@ -59,38 +52,40 @@
                             <td>Natural Gas</td>
                             <td>2019</td>
                             <td>1035.231</td>
-                            <td><a href="update.html">Update</a> | <a href="delete.html">Delete</a></td>
+                            <td><a asp-controller="Update" asp-action="Index">Update</a> | <a asp-controller="Delete" asp-action="Index">Delete</a></td>
                         </tr>
                         <tr>
                             <td>Transportation</td>
                             <td>Natural Gas</td>
                             <td>2018</td>
                             <td>962.172</td>
-                            <td><a href="update.html">Update</a> | <a href="delete.html">Delete</a></td>
+                            <td><a asp-controller="Update" asp-action="Index">Update</a> | <a asp-controller="Delete" asp-action="Index">Delete</a></td>
                         </tr>
                         <tr>
                             <td>Transportation</td>
                             <td>Natural Gas</td>
                             <td>2017</td>
                             <td>798.564</td>
-                            <td><a href="update.html">Update</a> | <a href="delete.html">Delete</a></td>
+                            <td><a asp-controller="Update" asp-action="Index">Update</a> | <a asp-controller="Delete" asp-action="Index">Delete</a></td>
                         </tr>
                         <tr>
                             <td>Transportation</td>
                             <td>Natural Gas</td>
                             <td>2016</td>
                             <td>757.182</td>
-                            <td><a href="update.html">Update</a> | <a href="delete.html">Delete</a></td>
+                            <td><a asp-controller="Update" asp-action="Index">Update</a> | <a asp-controller="Delete" asp-action="Index">Delete</a></td>
                         </tr>
                         <tr>
                             <td>Transportation</td>
                             <td>Natural Gas</td>
                             <td>2015</td>
                             <td>744.841</td>
-                            <td><a href="update.html">Update</a> | <a href="delete.html">Delete</a></td>
+                            <td><a asp-controller="Update" asp-action="Index">Update</a> | <a asp-controller="Delete" asp-action="Index">Delete</a></td>
                         </tr>
                     </tbody>
                 </table>
+                <br />
+                <br />
             </div>
         </div>
     </div>

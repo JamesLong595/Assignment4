@@ -133,7 +133,6 @@ namespace Assignment4
         private List<EnergySource> BuildEnergySources()
         {
             List<EnergySource> energySources = new List<EnergySource>();
-            int i = 0;
             foreach (DictionaryEntry entry in ENERGY_SOURCES_AND_SERIES_CODES)
             {
                 EnergySource energySource = new EnergySource();
@@ -147,7 +146,6 @@ namespace Assignment4
         private List<Sector> BuildSectors()
         {
             List<Sector> sectors = new List<Sector>();
-            int i = 0;
             foreach (DictionaryEntry entry in SECTORS_AND_SERIES_CODES)
             {
                 Sector sector = new Sector();

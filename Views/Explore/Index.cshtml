@@ -2,90 +2,90 @@
     ViewData["Title"] = "Explore";
 }
 
-    <div class="container bg-white">
-        <div class="row justify-content-center pt-3">
-            <div class="col-9">
-                <div class="row justify-content-center table-title">
-                    <div class="col text-center"><h2>Explore Annual Energy Consumption Data</h2></div>
-                </div>
-                <div class="row justify-content-center pb-2 border-bottom">
-                    <div class="col text-center"><a asp-controller="Create" asp-action="Index">Create New Record</a></div>
-                </div>
-                <form>
-                    <div class="form-row justify-content-center pt-3 pb-2">
-                        <div class="col-sm-3">
-                            <div class="search-box">
-                                <i class="material-icons">&#xE8B6;</i>
-                                <input type="text" class="form-control" placeholder="By sector&hellip;">
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="search-box">
-                                <i class="material-icons">&#xE8B6;</i>
-                                <input type="text" class="form-control" placeholder="By energy source&hellip;">
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="search-box">
-                                <i class="material-icons">&#xE8B6;</i>
-                                <input type="text" class="form-control" placeholder="By year&hellip;">
-                            </div>
-                        </div>
-                        <div class="col-sm-3 d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary">Search</button>
+<div class="container bg-white">
+    <div class="row justify-content-center pt-3">
+        <div class="col-9">
+            <div class="row justify-content-center table-title">
+                <div class="col text-center"><h2>Explore Annual Energy Consumption Data</h2></div>
+            </div>
+            <div class="row justify-content-center pb-2 border-bottom">
+                <div class="col text-center"><a asp-controller="Create" asp-action="Index">Create New Record</a></div>
+            </div>
+            <form>
+                <div class="form-row justify-content-center pt-3 pb-2">
+                    <div class="col-sm-3">
+                        <div class="search-box">
+                            <i class="material-icons">search</i>
+                            <input type="text" class="form-control" placeholder="By sector&hellip;">
                         </div>
                     </div>
-                </form>
-                <table class="table table-responsive-sm table-striped text-center pb-2 mb-2 resp">
-                    <thead>
-                        <tr>
-                            <th class="align-middle" scope="col">Sector</th>
-                            <th class="align-middle" scope="col">Energy Source</th>
-                            <th class="align-middle" scope="col">Year</th>
-                            <th class="align-middle" scope="col">Energy Consumption<br />(trillion BTUs)</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Transportation</td>
-                            <td>Natural Gas</td>
-                            <td>2019</td>
-                            <td>1035.231</td>
-                            <td><a asp-controller="Update" asp-action="Index">Update</a> | <a asp-controller="Delete" asp-action="Index">Delete</a></td>
-                        </tr>
-                        <tr>
-                            <td>Transportation</td>
-                            <td>Natural Gas</td>
-                            <td>2018</td>
-                            <td>962.172</td>
-                            <td><a asp-controller="Update" asp-action="Index">Update</a> | <a asp-controller="Delete" asp-action="Index">Delete</a></td>
-                        </tr>
-                        <tr>
-                            <td>Transportation</td>
-                            <td>Natural Gas</td>
-                            <td>2017</td>
-                            <td>798.564</td>
-                            <td><a asp-controller="Update" asp-action="Index">Update</a> | <a asp-controller="Delete" asp-action="Index">Delete</a></td>
-                        </tr>
-                        <tr>
-                            <td>Transportation</td>
-                            <td>Natural Gas</td>
-                            <td>2016</td>
-                            <td>757.182</td>
-                            <td><a asp-controller="Update" asp-action="Index">Update</a> | <a asp-controller="Delete" asp-action="Index">Delete</a></td>
-                        </tr>
-                        <tr>
-                            <td>Transportation</td>
-                            <td>Natural Gas</td>
-                            <td>2015</td>
-                            <td>744.841</td>
-                            <td><a asp-controller="Update" asp-action="Index">Update</a> | <a asp-controller="Delete" asp-action="Index">Delete</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <br />
-                <br />
-            </div>
+                    <div class="col-sm-3">
+                        <div class="search-box">
+                            <i class="material-icons">search</i>
+                            <input type="text" class="form-control" placeholder="By energy source&hellip;">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="search-box">
+                            <i class="material-icons">search</i>
+                            <input type="text" class="form-control" placeholder="By year&hellip;">
+                        </div>
+                    </div>
+                    <div class="col-sm-3 d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </form>
+            <table class="table table-responsive-sm table-striped text-center pb-2 mb-2 resp">
+                <thead>
+                    <tr>
+                        <th class="align-middle" scope="col">Sector</th>
+                        <th class="align-middle" scope="col">Energy Source</th>
+                        <th class="align-middle" scope="col">Year</th>
+                        <th class="align-middle" scope="col">Energy Consumption<br />(trillion BTUs)</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Transportation</td>
+                        <td>Natural Gas</td>
+                        <td>2019</td>
+                        <td>1035.231</td>
+                        <td><a asp-controller="Update" asp-action="Index">Update</a> | <a asp-controller="Delete" asp-action="Index">Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>Transportation</td>
+                        <td>Natural Gas</td>
+                        <td>2018</td>
+                        <td>962.172</td>
+                        <td><a asp-controller="Update" asp-action="Index">Update</a> | <a asp-controller="Delete" asp-action="Index">Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>Transportation</td>
+                        <td>Natural Gas</td>
+                        <td>2017</td>
+                        <td>798.564</td>
+                        <td><a asp-controller="Update" asp-action="Index">Update</a> | <a asp-controller="Delete" asp-action="Index">Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>Transportation</td>
+                        <td>Natural Gas</td>
+                        <td>2016</td>
+                        <td>757.182</td>
+                        <td><a asp-controller="Update" asp-action="Index">Update</a> | <a asp-controller="Delete" asp-action="Index">Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>Transportation</td>
+                        <td>Natural Gas</td>
+                        <td>2015</td>
+                        <td>744.841</td>
+                        <td><a asp-controller="Update" asp-action="Index">Update</a> | <a asp-controller="Delete" asp-action="Index">Delete</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <br />
         </div>
     </div>
+</div>

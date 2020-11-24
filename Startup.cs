@@ -68,6 +68,7 @@ namespace Assignment4
                 var context = serviceScope.ServiceProvider.GetRequiredService<Assignment4DbContext>();
                 context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
+                context.Database.SetCommandTimeout(180);
 
                 List<EnergySource> energySources = BuildEnergySources();
                 List<Sector> sectors = BuildSectors();

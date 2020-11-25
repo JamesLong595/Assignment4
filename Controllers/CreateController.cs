@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Encodings.Web;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using Assignment4.DataAccess;
 using Assignment4.Models;
 
@@ -21,8 +16,22 @@ namespace Assignment4.Controllers
         }
         public IActionResult Index()
         {
-
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateConsumptionRecord(NewConsumptionRecord newRecord)
+        {
+            Sector sector = _context.Sector.Where(s => s.SectorName == newRecord.SectorName).First();
+            EnergySource energySource = _context.EnergySource.Where(e => e.SourceName == newRecord.SourceName).First();
+            AnnualEnergyConsumption newConsumption = new AnnualEnergyConsumption();
+            newConsumption.sector = sector;
+            newConsumption.energysource = energySource;
+            newConsumption.Year = Convert.ToInt32(newRecord.Year);
+            newConsumption.Value = newRecord.Value;
+            _context.AnnualEnergyConsumption.Add(newConsumption);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Explore");
         }
     }
 }

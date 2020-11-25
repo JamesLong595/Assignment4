@@ -1,24 +1,17 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Assignment4.DataAccess;
-using Microsoft.EntityFrameworkCore.Design;
 using Assignment4.Models;
 using System.Collections.Specialized;
 using System.Collections;
 using System.Net.Http;
 using System.Text.Json;
-using System.Diagnostics;
 
 namespace Assignment4
 {
@@ -181,7 +174,7 @@ namespace Assignment4
                         if (sector.SectorName.Equals(pair.Item1) && energySource.SourceName.Equals(pair.Item2))
                         {
                             invalidCombination = true;
-                            break; ;
+                            break;
                         }
                     }
 

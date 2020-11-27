@@ -2,6 +2,8 @@
     ViewData["Title"] = "Create";
 }
 
+@model Assignment4.Models.NewConsumptionRecord
+
     <div class="container bg-white">
         <div class="row">
             <div class="col">
@@ -12,44 +14,44 @@
         </div>
         <div class="row justify-content-center pt-3">
             <div class="col-9">
-                <form>
+                <form asp-controller="Create" asp-action="CreateConsumptionRecord" method="post">
                     <div class="form-row justify-content-center">
                         <div class="form-group col-md-3">
-                            <label for="sector">Sector</label>
-                            <select id="sector" class="form-control">
+                            <label asp-for="SectorName">Sector</label>
+                            <select asp-for="SectorName" class="form-control">
                                 <option selected>Choose...</option>
-                                <option>Commercial</option>
-                                <option>Industrial</option>
-                                <option>Residential</option>
-                                <option>Transportation</option>
+                                <option value="Commercial">Commercial</option>
+                                <option value="Electric Power">Electric Power</option>
+                                <option value="Industrial">Industrial</option>
+                                <option value="Residential">Residential</option>
+                                <option value="Transportation">Transportation</option>
                             </select>
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="energySource">Energy Source</label>
-                            <select id="energySource" class="form-control">
+                            <label asp-for="SourceName">Energy Source</label>
+                            <select asp-for="SourceName" class="form-control">
                                 <option selected>Choose...</option>
-                                <option>Biomass Energy</option>
-                                <option>Coal</option>
-                                <option>Electricity Retail Sales</option>
-                                <option>Geothermal Energy</option>
-                                <option>Natural Gas</option>
-                                <option>Solar Energy</option>
-                                <option>Total Energy</option>
-                                <option>Total Fossil Fuels</option>
-                                <option>Total Petroleum</option>
-                                <option>Total Primary Energy</option>
-                                <option>Total Renewable Energy</option>
+                                <option value="Biomass Energy">Biomass Energy</option>
+                                <option value="Coal">Coal</option>
+                                <option value="Geothermal Energy">Geothermal Energy</option>
+                                <option value="Natural Gas">Natural Gas</option>
+                                <option value="Solar Energy">Solar Energy</option>
+                                <option value="Total Energy">Total Energy</option>
+                                <option value="Total Fossil Fuels">Total Fossil Fuels</option>
+                                <option value="Total Petroleum">Total Petroleum</option>
+                                <option value="Total Primary Energy">Total Primary Energy</option>
+                                <option value="Total Renewable Energy">Total Renewable Energy</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-row justify-content-center">
                         <div class="form-group col-md-3">
-                            <label for="year">Year</label>
-                            <input type="text" class="form-control" id="year">
+                            <label asp-for="Year">Year</label>
+                            <input type="text" class="form-control" asp-for="Year">
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="energy consumption">Energy Consumption (in trillion BTUs)</label>
-                            <input type="text" class="form-control" id="year">
+                            <label asp-for="Value">Energy Consumption (in trillion BTUs)</label>
+                            <input type="text" class="form-control" asp-for="Value">
                         </div>
                     </div>
                     <div class="form-row justify-content-center">

@@ -8,7 +8,7 @@ namespace Assignment4.Models
     {
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        public string ConsumptionId { get; set; }
+        public int ConsumptionId { get; set; }
         public Sector sector { get; set; }
         public EnergySource energysource { get; set; }
         public int Year { get; set; }

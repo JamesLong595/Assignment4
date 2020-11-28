@@ -50,9 +50,9 @@
         </ul>
     </nav>
 
-        <main role="main" class="pt-4">
-            @RenderBody()
-        </main>
+    <main role="main">
+        @RenderBody()
+    </main>
 
     <footer>
         <a href="https://www.eia.gov/opendata/qb.php" target="_blank">Source Data</a> | <a href="http://www.usf.edu/" target="_blank">USF</a> | <a href="mailto:aston@usf.edu;%20jlong4@usf.edu;%20mborkland@usf.edu?subject=Energy%20Insights%20Project">Contact Us</a> | <a asp-controller="Privacy" asp-action="Index">Privacy</a>
@@ -64,6 +64,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/chart/Chart.bundle.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>

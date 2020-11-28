@@ -36,15 +36,15 @@
                                 <form class="form-group" asp-controller="Update" asp-action="Index" method="post">
                                     <input type="hidden" name="sector" value="@Model.Sector" />
                                     <input type="hidden" name="source" value="@Model.Source" />
-                                    <input type="hidden" name="source" value="@row.Year" />
-                                    <input type="hidden" name="source" value="@row.Value" />
+                                    <input type="hidden" name="year" value="@row.Year" />
+                                    <input type="hidden" name="value" value="@row.Value" />
                                     <input type="submit" value="Update" class="btn btn-primary btn-sm" />
                                 </form>&nbsp;&nbsp;
                                 <form class="form-group" asp-controller="Delete" asp-action="Index" method="post">
                                     <input type="hidden" name="sector" value="@Model.Sector" />
                                     <input type="hidden" name="source" value="@Model.Source" />
-                                    <input type="hidden" name="source" value="@row.Year" />
-                                    <input type="hidden" name="source" value="@row.Value" />
+                                    <input type="hidden" name="year" value="@row.Year" />
+                                    <input type="hidden" name="value" value="@row.Value" />
                                     <input type="submit" value="Delete" class="btn btn-primary btn-sm" />
                                 </form>
                             </td>

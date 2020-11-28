@@ -30,7 +30,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand navbar-custom">
+    <nav class="navbar navbar-expand navbar-custom fixed-top">
         <ul class="navbar-nav mr-auto font-weight-bold">
             <li class="nav-item">
                 <a class="nav-link text-wrap" asp-controller="Home" asp-action="Index">
@@ -50,7 +50,7 @@
         </ul>
     </nav>
 
-        <main role="main">
+        <main role="main" class="pt-4">
             @RenderBody()
         </main>
 

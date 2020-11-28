@@ -194,7 +194,10 @@ namespace Assignment4
                         consumption.energysource = energySource;
                         consumption.sector = sector;
                         consumption.Year = Convert.ToInt32(datum[0].GetString());
-                        consumption.Value = Convert.ToString(datum[1]);
+                        if (Convert.ToString(datum[1]) != "NA")
+                        {
+                            consumption.Value = Convert.ToDecimal(Convert.ToString(datum[1]));
+                        }
                         consumptionList.Add(consumption);
                     }
                 }

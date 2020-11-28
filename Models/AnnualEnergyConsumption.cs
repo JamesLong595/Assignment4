@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Assignment4.Models
@@ -11,6 +12,6 @@ namespace Assignment4.Models
         public Sector sector { get; set; }
         public EnergySource energysource { get; set; }
         public int Year { get; set; }
-        public string Value { get; set; }
+        public Decimal Value { get; set; }
     }
 }

@@ -9,8 +9,7 @@ namespace Assignment4.DataAccess
 {
     public class Assignment4DbContext : DbContext
     {
-        public Assignment4DbContext(DbContextOptions<Assignment4DbContext> options)
-            : base(options)
+        public Assignment4DbContext(DbContextOptions<Assignment4DbContext> options) : base(options)
         {
         }
 

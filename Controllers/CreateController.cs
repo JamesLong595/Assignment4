@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Encodings.Web;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using Assignment4.DataAccess;
 using Assignment4.Models;
+using System.Threading.Tasks;
 
 namespace Assignment4.Controllers
 {
@@ -21,8 +17,23 @@ namespace Assignment4.Controllers
         }
         public IActionResult Index()
         {
-
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Index(string SectorName, string SourceName, string Year, string Value)
+        {
+            Sector sector = _context.Sector.Where(s => s.SectorName == SectorName).First();
+            EnergySource energySource = _context.EnergySource.Where(e => e.SourceName == SourceName).First();
+            AnnualEnergyConsumption newRecord = new AnnualEnergyConsumption();
+            newRecord.sector = sector;
+            newRecord.energysource = energySource;
+            newRecord.Year = Convert.ToInt32(Year);
+            newRecord.Value = Convert.ToDecimal(Value);
+            _context.AnnualEnergyConsumption.Add(newRecord);
+            await _context.SaveChangesAsync();
+            AnnualEnergyConsumption confirmRecord = _context.AnnualEnergyConsumption.Where(c => c.sector.SectorName == SectorName & c.energysource.SourceName == SourceName & c.Year == Convert.ToInt32(Year) & c.Value == Convert.ToDecimal(Value)).First();
+            return View(confirmRecord);
         }
     }
 }

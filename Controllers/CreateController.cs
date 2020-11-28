@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Assignment4.DataAccess;
 using Assignment4.Models;
+using System.Threading.Tasks;
 
 namespace Assignment4.Controllers
 {
@@ -20,18 +21,19 @@ namespace Assignment4.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateConsumptionRecord(NewConsumptionRecord newRecord)
+        public async Task<IActionResult> Index(string SectorName, string SourceName, string Year, string Value)
         {
-            Sector sector = _context.Sector.Where(s => s.SectorName == newRecord.SectorName).First();
-            EnergySource energySource = _context.EnergySource.Where(e => e.SourceName == newRecord.SourceName).First();
-            AnnualEnergyConsumption newConsumption = new AnnualEnergyConsumption();
-            newConsumption.sector = sector;
-            newConsumption.energysource = energySource;
-            newConsumption.Year = Convert.ToInt32(newRecord.Year);
-            newConsumption.Value = newRecord.Value;
-            _context.AnnualEnergyConsumption.Add(newConsumption);
-            _context.SaveChanges();
-            return RedirectToAction("Index", "Explore");
+            Sector sector = _context.Sector.Where(s => s.SectorName == SectorName).First();
+            EnergySource energySource = _context.EnergySource.Where(e => e.SourceName == SourceName).First();
+            AnnualEnergyConsumption newRecord = new AnnualEnergyConsumption();
+            newRecord.sector = sector;
+            newRecord.energysource = energySource;
+            newRecord.Year = Convert.ToInt32(Year);
+            newRecord.Value = Convert.ToDecimal(Value);
+            _context.AnnualEnergyConsumption.Add(newRecord);
+            await _context.SaveChangesAsync();
+            AnnualEnergyConsumption confirmRecord = _context.AnnualEnergyConsumption.Where(c => c.sector.SectorName == SectorName & c.energysource.SourceName == SourceName & c.Year == Convert.ToInt32(Year) & c.Value == Convert.ToDecimal(Value)).First();
+            return View(confirmRecord);
         }
     }
 }

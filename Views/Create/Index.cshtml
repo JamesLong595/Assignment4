@@ -2,7 +2,7 @@
     ViewData["Title"] = "Create";
 }
 
-@model Assignment4.Models.AnnualEnergyConsumption
+@model Assignment4.Models.CreationConfirmation
 
 <div class="container bg-white">
     <div class="row justify-content-center pt-3">
@@ -63,49 +63,60 @@
     {
         <div class="row justify-content-center pt-3">
             <div class="col-9 pb-2 mt-4 mb-2">
-                <h2 class="text-center">New Record Successfully Created</h2>
+                <h2 class="text-center">@Model.Heading</h2>
             </div>
         </div>
-        <div class="row justify-content-center pt-3">
-            <div class="col-auto">
-                <table class="table table-responsive">
-                    <thead>
-                        <tr>
-                            <th>
-                                Sector
-                            </th>
-                            <th>
-                                Source
-                            </th>
-                            <th>
-                                Year
-                            </th>
-                            <th>
-                                Value
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                @Model.sector.SectorName
-                            </td>
-                            <td>
-                                @Model.energysource.SourceName
-                            </td>
-                            <td>
-                                @Model.Year
-                            </td>
-                            <td>
-                                @Model.Value
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        @if (Model.WasSuccessful)
+        {
+            <div class="row justify-content-center pt-3">
+                <div class="col-auto">
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Sector
+                                </th>
+                                <th>
+                                    Source
+                                </th>
+                                <th>
+                                    Year
+                                </th>
+                                <th>
+                                    Value
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Model.ConsumptionData.sector.SectorName
+                                </td>
+                                <td>
+                                    @Model.ConsumptionData.energysource.SourceName
+                                </td>
+                                <td>
+                                    @Model.ConsumptionData.Year
+                                </td>
+                                <td>
+                                    @Model.ConsumptionData.Value
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-        <br />
-        <p align="center">You may now create a new record or return to the <a asp-controller="Explore" asp-action="Index">Explore page</a>.</p>
+            <br />
+        }
+
+        @if (Model.WasSuccessful)
+        {
+            <p align="center">You may now create a new record or return to the <a asp-controller="Explore" asp-action="Index">Explore page</a>.</p>
+        }
+        else
+        {
+            <p align="center">Please check your input values and try again.</p>
+        }
         <br />
     }
 </div>

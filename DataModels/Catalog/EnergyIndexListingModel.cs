@@ -3,6 +3,8 @@
 //using System.Linq;
 //using System.Threading.Tasks;
 
+
+
 //namespace Assignment4.DataModels.Catalog
 //{
 //    public class EnergyIndexListingModel
@@ -11,6 +13,6 @@
 //        public string Sector { get; set; }
 //        public string EnergySource { get; set; }
 //        public int Year { get; set; }
-//        public string Value { get; set; }
+//        public Decimal Value { get; set; }
 //    }
 //}

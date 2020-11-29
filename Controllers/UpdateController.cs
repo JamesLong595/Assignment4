@@ -24,5 +24,39 @@ namespace Assignment4.Controllers
 
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Index(string sector, string source, int year, Decimal? value, string? valueStr)
+        {
+            AnnualEnergyConsumption modRecord = _context.AnnualEnergyConsumption
+                        .Where(t => t.sector.SectorName == sector & t.energysource.SourceName == source & t.Year == year)
+                        .First();
+            if (modRecord.Value == value)
+            {
+                UpdateRecord updRecord = new UpdateRecord();
+                updRecord.Sector = sector;
+                updRecord.Source = source;
+                updRecord.Year = year;
+                updRecord.Value = (Decimal)value;
+                updRecord.origValue = value;
+                return View(updRecord);
+            }
+            else
+            {
+                modRecord.Value = Convert.ToDecimal(valueStr);
+                _context.AnnualEnergyConsumption.Update(modRecord);
+                await _context.SaveChangesAsync();
+                UpdateRecord updRecord = new UpdateRecord();
+                updRecord.Sector = sector;
+                updRecord.Source = source;
+                updRecord.Year = year;
+                updRecord.Value = _context.AnnualEnergyConsumption
+                        .Where(t => t.sector.SectorName == sector & t.energysource.SourceName == source & t.Year == year)
+                        .Select(v => v.Value)
+                        .First();
+                updRecord.origValue = value;
+                return View(updRecord);
+            }
+        }
     }
 }

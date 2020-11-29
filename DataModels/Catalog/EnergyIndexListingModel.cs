@@ -11,6 +11,6 @@ namespace Assignment4.DataModels.Catalog
         public string Sector { get; set; }
         public string EnergySource { get; set; }
         public int Year { get; set; }
-        public string Value { get; set; }
+        public Decimal Value { get; set; }
     }
 }

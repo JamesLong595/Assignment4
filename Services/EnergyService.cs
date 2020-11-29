@@ -58,9 +58,11 @@ namespace Assignment4.Services
 
         }
 
-        public string getvalue(int id)
+        public Decimal getvalue(int id)
         {
             return _context.AnnualEnergyConsumption.FirstOrDefault(energy => energy.ConsumptionId == id).Value;
         }
+
+      
     }
 }

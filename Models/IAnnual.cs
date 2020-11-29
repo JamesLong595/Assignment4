@@ -14,6 +14,6 @@ namespace Assignment4.Models
         int getyear(int id);
         string getenergysource(int id);
 
-        string getvalue(int id);
+        Decimal getvalue(int id);
     }
 }

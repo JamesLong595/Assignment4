@@ -19,10 +19,46 @@ namespace Assignment4.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+
+        IActionResult Index()
         {
 
             return View();
+        }
+
+        [HttpPost]
+        public  IActionResult Index(string sector, string source, int year, Decimal value)
+        {
+            AnnualEnergyConsumption DelRecord = _context.AnnualEnergyConsumption
+                        .Where(t => t.sector.SectorName == sector & t.energysource.SourceName == source & t.Year == year)
+                        .First();
+            
+                DeleteRecord DelRecord1 = new DeleteRecord();
+                DelRecord1.Sector = sector;
+                DelRecord1.Source = source;
+                DelRecord1.Year = year;
+                DelRecord1.Value = value;
+                return View(DelRecord1); 
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DelConfirm(string sector, string source, int year, Decimal value, string confirmation)
+        {
+            AnnualEnergyConsumption DelRecord = _context.AnnualEnergyConsumption
+                       .Where(t => t.sector.SectorName == sector & t.energysource.SourceName == source & t.Year == year)
+                       .First();
+            if (confirmation == "Yes")
+            {
+                _context.AnnualEnergyConsumption.Remove(DelRecord);
+                await _context.SaveChangesAsync();
+                return View();
+            }
+            else
+            {
+                // return RedirectToAction($"Index({sector, source})", "DetailsController");
+                return RedirectToAction("Index", "ExploreController");
+            }
+            
         }
     }
 }

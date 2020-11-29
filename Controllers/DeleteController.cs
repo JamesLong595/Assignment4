@@ -51,12 +51,11 @@ namespace Assignment4.Controllers
             {
                 _context.AnnualEnergyConsumption.Remove(DelRecord);
                 await _context.SaveChangesAsync();
-                return View();
+                return View(DelRecord);
             }
             else
             {
-                // return RedirectToAction($"Index({sector, source})", "DetailsController");
-                return RedirectToAction("Index", "ExploreController");
+                return View();
             }
             
         }

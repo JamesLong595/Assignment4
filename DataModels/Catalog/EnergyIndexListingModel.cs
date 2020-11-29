@@ -3,8 +3,6 @@
 //using System.Linq;
 //using System.Threading.Tasks;
 
-
-
 //namespace Assignment4.DataModels.Catalog
 //{
 //    public class EnergyIndexListingModel

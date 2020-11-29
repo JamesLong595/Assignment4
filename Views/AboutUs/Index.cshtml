@@ -46,7 +46,7 @@
                         <li class="list-group-item">Aston is currently working as a Business Analyst at the University of South Florida. Aston is working as a Graduate Assistant while doing analytics for the Academic Success Center. Aston is extremely interested in data science and sports. Aston hopes to work with NBA athletes in the future to improve their performance.</li>
                         <li class="list-group-item">MS, Business Analytics and Information Systems<br />Expected July 2021</li>
                         <li class="list-group-item">Assignment 3: Made changes to the about us page by updating Bio's and adding a form.</li>
-                        <li class="list-group-item">Assignment 4: </li>
+                        <li class="list-group-item">Assignment 4: Worked on the Update and Delete functionality of the CRUD operations for the website. This included the views, controllers and models related to these operation. Also tried to implement an interface and Service that would hangle unique request from the Database. Since these request was not apart of the Assignment core, they were commented out because of lack of time to complete. Esured the navigation from the CRUD pages to the Explore and Details pages were working properly. Lastly, Updated personal information on About us page.  </li>
                     </ul>
                 </div>
             </div>
@@ -271,7 +271,32 @@
         <div class="col-4">
             <p align="center"><b>Aston</b></p>
             <p><pre>
-Output goes here
+$ git log --author="Aston Wright" --pretty=tformat: --numstat
+37      37      Controllers/CatalogController.cs
+38      2       Controllers/DeleteController.cs
+15      15      DataModels/Catalog/EnergyIndexListingModel.cs
+11      11      DataModels/Catalog/EnergyIndexModel.cs
+14      0       Models/DeleteRecord.cs
+1       1       Views/AboutUs/Index.cshtml
+1       1       Views/Catalog/Index.cshtml
+26      0       Views/Delete/DelConfirm.cshtml
+33      38      Views/Delete/Index.cshtml
+35      1       Controllers/UpdateController.cs
+1       1       DataModels/Catalog/EnergyIndexListingModel.cs
+1       1       Models/IAnnual.cs
+14      0       Models/UpdateRecord.cs
+3       1       Services/EnergyService.cs
+85      51      Views/Update/Index.cshtml
+40      0       Controllers/CatalogController.cs
+16      0       DataModels/Catalog/EnergyIndexListingModel.cs
+12      0       DataModels/Catalog/EnergyIndexModel.cs
+1       1       Models/AnnualEnergyConsumption.cs
+19      0       Models/IAnnual.cs
+66      0       Services/EnergyService.cs
+1       0       Startup.cs
+1       0       Views/Catalog/Index.cshtml
+2       2       appsettings.json
+
             </pre></p>
         </div>
     </div>
